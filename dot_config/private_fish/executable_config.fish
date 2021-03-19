@@ -7,9 +7,6 @@ set -x VISUAL nvim
 # rust
 set PATH $HOME/.cargo/bin $PATH
 
-#
-set PATH $HOME/.cabal/bin $HOME/.ghcup/bin $PATH
-
 # pyenv init
 if command -v pyenv 1>/dev/null 2>&1
   status --is-interactive; and pyenv init - | source
