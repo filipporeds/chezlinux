@@ -16,6 +16,5 @@ end
 # Adjust .files in home
 # source: << https://wiki.archlinux.org/index.php/XDG_Base_Directory >>
 set -gx CONDARC $XDG_CONFIG_HOME/conda/condarc
-set -gx CARGO_HOME $XDG_DATA_HOME/cargo
 set -gx IPYTHONDIR $XDG_CONFIG_HOME/jupyter
 set -gx JUPYTER_CONFIG_DIR $XDG_CONFIG_HOME/jupyter
