@@ -1,9 +1,17 @@
 #!/bin/sh
-# map <caps lock> to <esc>
+
+# Map <caps lock> to <esc>
 setxkbmap -option caps:escape
 
-# adjust keyboard repeat
+# Adjust keyboard repeat
 xset r rate 175 60
 
-# adjust screen resolution
+# Adjust screen resolution
 xrandr --output HDMI-0 --mode 2560x1440 --scale 1x1
+
+# Adjust .files in home
+# source: << https://wiki.archlinux.org/index.php/XDG_Base_Directory >>
+USERXSESSION="$XDG_CACHE_HOME/x11/xsession"
+USERXSESSIONRC="$XDG_CACHE_HOME/x11/xsessionrc"
+ALTUSERXSESSION="$XDG_CACHE_HOME/x11/Xsession"
+ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"

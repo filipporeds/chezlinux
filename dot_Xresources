@@ -46,10 +46,4 @@
 *.color14: #8FBCBB
 *.color15: #ECEFF4
 
-rofi.modi:              ssh,window,drun,run
-rofi.color-enabled:     true
-rofi.color-window:      #3B4252, #3B4252, #3B4252
-rofi.color-normal:      #3B4252, #f8f8f2, #4C566A, #88C0D0, #3B4252
-rofi.hide-scrollbar:    true
-
 Xft.dpi: 100
