@@ -11,7 +11,7 @@ xrandr --output HDMI-0 --mode 2560x1440 --scale 1x1
 
 # Adjust .files in home
 # source: << https://wiki.archlinux.org/index.php/XDG_Base_Directory >>
-USERXSESSION="$XDG_CACHE_HOME/x11/xsession"
-USERXSESSIONRC="$XDG_CACHE_HOME/x11/xsessionrc"
-ALTUSERXSESSION="$XDG_CACHE_HOME/x11/Xsession"
-ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
+export USERXSESSION="$XDG_CACHE_HOME/x11/xsession"
+export USERXSESSIONRC="$XDG_CACHE_HOME/x11/xsessionrc"
+export ALTUSERXSESSION="$XDG_CACHE_HOME/x11/Xsession"
+export ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
