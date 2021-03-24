@@ -5,9 +5,6 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx TERMINAL alacritty
 
-# Add to path rustup installation
-fish_add_path $HOME/.cargo/bin
-
 # Check and init pyenv
 if command -v pyenv 1>/dev/null 2>&1
   status --is-interactive; and pyenv init - | source
