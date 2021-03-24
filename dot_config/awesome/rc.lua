@@ -348,7 +348,13 @@ globalkeys = gears.table.join(
     
     -- Rofi launcher
     awful.key({ modkey }, "\\", function() awful.spawn("rofi -show drun") end,
-             {description = "show rofi run", group = "launcher" })
+             {description = "show rofi run", group = "launcher" }),
+    -- Rofimoji launcher
+    awful.key({ modkey }, "]", function() awful.spawn("rofimoji") end,
+             {description = "show rofi run", group = "launcher" }),
+    -- Screenshot tool
+    awful.key({ }, "Print", function () awful.spawn.with_shell("maim -s -u | xclip -selection clipboard -t image/png -i") end, 
+	     {description = "take region screenshot", group = "screen"}) 
 )
 
 clientkeys = gears.table.join(
