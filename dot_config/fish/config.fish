@@ -34,4 +34,4 @@ set -gx PYTHONHISTFILE $XDG_DATA_HOME/python_repl_history
 
 set -gx NODE_REPL_HISTORY $XDG_DATA_HOME/node_repl_history
 alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
-set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME
+set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/config
