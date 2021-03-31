@@ -7,7 +7,7 @@ setxkbmap -option caps:escape
 xset r rate 175 60
 
 # Adjust screen resolution
-xrandr --output HDMI-0 --mode 2560x1440 --scale 1x1
+xrandr --output DP-4 --mode 2560x1440 --scale 1x1
 
 # Adjust .files in home
 # source: << https://wiki.archlinux.org/index.php/XDG_Base_Directory >>
