@@ -19,3 +19,6 @@ let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 "" }}
 
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
