@@ -491,6 +491,7 @@ awful.rules.rules = {
           "DTA",  -- Firefox addon DownThemAll.
           "copyq",  -- Includes session name in class.
           "pinentry",
+          "psensor"
         },
         class = {
           "Arandr",
@@ -580,6 +581,23 @@ client.connect_signal("request::titlebars", function(c)
         },
         layout = wibox.layout.align.horizontal
     	}
+end)
+
+-- turn titlebar on when client is floating
+client.connect_signal("property::floating", function(c)
+  if c.floating and not c.requests_no_titlebar then
+    awful.titlebar.show(c)
+  else
+    awful.titlebar.hide(c)
+  end
+end)
+
+-- turn tilebars on when layout is floating
+awful.tag.attached_connect_signal(nil, "property::layout", function (t)
+  local float = t.layout.name == "floating"
+  for _,c in pairs(t:clients()) do
+    c.floating = float
+  end
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
