@@ -21,9 +21,27 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- Widgets
+-- Widgets (https://github.com/streetturtle/awesome-wm-widgets)
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+
+-- {{{ Processes
+local run_on_start_up = {
+   "picom --experimental-backends --dbus --config " ..
+   gears.filesystem.get_configuration_dir() ..
+   "themes/xresources/configuration/picom.conf",
+}
+
+for _, app in ipairs(run_on_start_up) do
+   local findme = app
+   local firstspace = app:find(" ")
+   if firstspace then
+      findme = app:sub(0, firstspace - 1)
+   end
+   -- pipe commands to bash to allow command to be shell agnostic
+   awful.spawn.with_shell(string.format("echo 'pgrep -u $USER -x %s > /dev/null || (%s)' | bash -", findme, app), false)
+end
+-- }}}
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -610,12 +628,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- {{{ Window geometry
-
--- Rounded corners
-client.connect_signal("manage", function (c)
-   c.shape = function(cr, w, h)
-       gears.shape.rounded_rect(cr, w, h, 6)
-   end
-end)
 
 --- }}}
