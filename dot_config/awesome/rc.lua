@@ -628,5 +628,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- {{{ Window geometry
-
+-- Rounded corners
+client.connect_signal("manage", function (c)
+   c.shape = function(cr, w, h)
+       gears.shape.rounded_rect(cr, w, h, 6)
+   end
+end)
 --- }}}
