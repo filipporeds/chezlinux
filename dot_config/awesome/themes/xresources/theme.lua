@@ -128,6 +128,6 @@ local is_dark_bg = (bg_numberic_value < 383)
 -- theme.wallpaper = function(s)
 --     return theme_assets.wallpaper(wallpaper_bg, wallpaper_fg, wallpaper_alt_fg, s)
 -- end
-theme.wallpaper = '/usr/share/pixmaps/mountain.jpg'
+theme.wallpaper = '/usr/share/pixmaps/nebula.png'
 
 return theme
