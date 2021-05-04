@@ -5,6 +5,10 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx TERMINAL alacritty
 
+# GPG
+set -gx GPG_TTY (tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 # Check and init pyenv
 if command -v pyenv 1>/dev/null 2>&1
   status --is-interactive; and pyenv init - | source
