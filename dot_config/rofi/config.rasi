@@ -56,10 +56,10 @@ configuration {
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
 /*	theme: ;*/
-	color-normal: "#3B4252, #f8f8f2, #4C566A, #88C0D0, #3B4252";
+	color-normal: "#2E3440, #f8f8f2, #3B4252, #88C0D0, #2E3440";
 /*	color-urgent: ;*/
 /*	color-active: ;*/
-	color-window: "#3B4252, #3B4252, #3B4252";
+	color-window: "#2E3440, #2E3440, #2E3440";
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	matching-negate-char: '-' /* unsupported */;*/

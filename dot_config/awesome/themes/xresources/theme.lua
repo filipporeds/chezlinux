@@ -17,15 +17,15 @@ local theme = dofile(themes_path.."default/theme.lua")
 theme.font          = "inter 10"
 
 theme.bg_normal     = xrdb.background
-theme.bg_focus      = xrdb.color12
+theme.bg_focus      = xrdb.color8
 theme.bg_urgent     = xrdb.color9
 theme.bg_minimize   = xrdb.color8
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = xrdb.foreground
-theme.fg_focus      = theme.bg_normal
-theme.fg_urgent     = theme.bg_normal
-theme.fg_minimize   = theme.bg_normal
+theme.fg_focus      = xrdb.foreground
+theme.fg_urgent     = xrdb.foreground
+theme.fg_minimize   = xrdb.foreground
 
 theme.useless_gap   = dpi(6)
 theme.border_width  = dpi(2)
