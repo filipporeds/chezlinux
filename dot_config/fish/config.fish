@@ -5,12 +5,6 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx TERMINAL alacritty
 
-# Check and init pyenv
-if command -v pyenv 1>/dev/null 2>&1
-  status --is-interactive; and pyenv init - | source
-  status --is-interactive; and pyenv virtualenv-init - | source
-end
-
 # Screenshot tool
 alias screenshot="maim -s -u | xclip -selection clipboard -t image/png -i"
 
