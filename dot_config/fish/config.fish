@@ -8,6 +8,13 @@ set -gx TERMINAL alacritty
 # Screenshot tool
 alias screenshot="maim -s -u | xclip -selection clipboard -t image/png -i"
 
+# pyenv
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+
+pyenv init --path | source
+pyenv init - | source
+
 # Hardtouch
 function hardtouch
     mkdir -p (dirname "$argv[1]") && touch "$argv[1]"
