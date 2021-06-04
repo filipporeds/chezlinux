@@ -2,7 +2,7 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
--- ... and remove tmux suggestions
+-- Remove tmux suggestions
 package.loaded["awful.hotkeys_popup.keys.tmux"] = {}
 
 -- Standard awesome library

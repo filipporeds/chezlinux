@@ -15,12 +15,6 @@ set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 pyenv init --path | source
 pyenv init - | source
 
-# Hardtouch
-function hardtouch
-    mkdir -p (dirname "$argv[1]") && touch "$argv[1]"
-end
-
-
 # XDG Directories
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_CACHE_HOME $HOME/.cache
