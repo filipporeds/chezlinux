@@ -1,7 +1,8 @@
 [Default Applications]
 x-scheme-handler/tg=userapp-Telegram Desktop-AD91Y0.desktop
-application/pdf=chromium.desktop
+application/pdf=org.pwmt.zathura.desktop
 text/plain=visual-studio-code.desktop
+text/x-c=visual-studio-code.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-AD91Y0.desktop
