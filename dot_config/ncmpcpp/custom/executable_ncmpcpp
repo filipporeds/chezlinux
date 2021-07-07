@@ -1,0 +1,25 @@
+#!/bin/bash
+
+export FIFO_UEBERZUG="/tmp/mpd-ueberzug-${PPID}"
+
+# Create fifo
+pkill -P $$ 2>/dev/null
+rm "$FIFO_UEBERZUG" 2>/dev/null
+mkfifo "$FIFO_UEBERZUG" >/dev/null
+
+# Cleanup
+cleanup() {
+    rm "$FIFO_UEBERZUG" 2>/dev/null
+    rm /tmp/mpd_cover.jpg 2>/dev/null
+
+    pkill -P $$ 2>/dev/null
+    pkill ncmpcpp_cover_art.sh
+}
+
+trap cleanup EXIT 2>/dev/null
+tail --follow "$FIFO_UEBERZUG" | ueberzug layer --silent --parser simple >/dev/null 2>&1 &
+
+ncmpcpp
+cleanup
+
+unset FIFO_UEBERZUG

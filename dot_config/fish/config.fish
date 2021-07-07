@@ -6,7 +6,10 @@ set -gx VISUAL nvim
 set -gx TERMINAL alacritty
 
 # Screenshot tool
-alias screenshot="maim -s -u | xclip -selection clipboard -t image/png -i"
+alias screenshot="maim -s -u -m 10 | xclip -selection clipboard -t image/png -i"
+
+# Music tool
+alias music="$HOME/.config/ncmpcpp/custom/ncmpcpp"
 
 # pyenv
 set -Ux PYENV_ROOT $HOME/.pyenv

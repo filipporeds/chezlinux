@@ -17,5 +17,5 @@ export ALTUSERXSESSION="$XDG_CACHE_HOME/x11/Xsession"
 export ERRFILE="$XDG_CACHE_HOME/x11/xsession-errors"
 
 # Theme
-export QT_STYLE_OVERRIDE=adwaita
+export QT_QPA_PLATFORMTHEME=qt5ct
 export TDESKTOP_USE_GTK_FILE_DIALOG=1

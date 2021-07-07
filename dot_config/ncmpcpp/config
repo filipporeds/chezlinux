@@ -1,0 +1,37 @@
+# Directory for storing ncmpcpp related files.
+ncmpcpp_directory = ~/.config/ncmpcpp
+
+# Cover art
+execute_on_song_change="~/.config/ncmpcpp/custom/coverart"
+
+# Ueberzug
+visualizer_look = "  "
+startup_screen = visualizer
+startup_slave_screen = playlist  
+startup_slave_screen_focus = yes 
+locked_screen_width_part = 30
+
+# Colors
+main_window_color = blue 
+
+# General formatting
+titles_visibility = "yes"
+header_visibility = "no"
+statusbar_visibility = "yes"
+playlist_show_remaining_time = yes
+
+# Player
+autocenter_mode = "yes"
+centered_cursor = "yes"
+mouse_support = "yes"
+colors_enabled = "yes"
+mpd_crossfade_time = "0"
+follow_now_playing_lyrics = "yes"
+store_lyrics_in_song_dir = "yes"
+song_window_title_format = ncmpcpp
+ask_before_clearing_playlists = "no"
+volume_change_step = "1"
+display_bitrate = "yes"
+media_library_primary_tag = "album_artist"
+
+browser_display_mode = classic
